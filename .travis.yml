@@ -1,0 +1,16 @@
+sudo: required
+
+language: node
+
+services:
+  - docker
+
+branches:
+  only:
+  - master
+
+jobs:
+  include:
+    - stage: TravisTest of Rollback
+      script:
+      - docker build -t travistest .
